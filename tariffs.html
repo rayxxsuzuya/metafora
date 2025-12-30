@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header second">
+    <div class="container">
+      <div class="header__block">
+        <a class="header__logo" href="#">
+            <img class="header__first" src="img/logo.svg" width="208" height="44" alt="Метафора касса">
+            <img class="header__second" src="img/logo-fixed.svg" width="208" height="44" alt="Метафора касса">
+          </a>
+        <div class="header__main">
+          <nav class="header__nav">
+            <a class="header__link" href="#">Возможности</a>
+            <a class="header__link" href="#">Тарифы</a>
+            <a class="header__link" href="#">Блог</a>
+            <a class="header__link header__link--under" href="#">События</a>
+            <a class="header__link" href="#">Помощь</a>
+          </nav>
+          <a class="header__phone" href="tel:+74959990000">+7 (495) 999-00-00</a>
+          <div class="header__lk">
+            <a class="header__button" href="#">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="24" fill="white" />
+                <path
+                  d="M24.1596 23.62C24.1296 23.62 24.1096 23.62 24.0796 23.62C24.0296 23.61 23.9596 23.61 23.8996 23.62C20.9996 23.53 18.8096 21.25 18.8096 18.44C18.8096 15.58 21.1396 13.25 23.9996 13.25C26.8596 13.25 29.1896 15.58 29.1896 18.44C29.1796 21.25 26.9796 23.53 24.1896 23.62C24.1796 23.62 24.1696 23.62 24.1596 23.62ZM23.9996 14.75C21.9696 14.75 20.3096 16.41 20.3096 18.44C20.3096 20.44 21.8696 22.05 23.8596 22.12C23.9096 22.11 24.0496 22.11 24.1796 22.12C26.1396 22.03 27.6796 20.42 27.6896 18.44C27.6896 16.41 26.0296 14.75 23.9996 14.75Z"
+                  fill="#1F5FDB" />
+                <path
+                  d="M24.1696 34.55C22.2096 34.55 20.2396 34.05 18.7496 33.05C17.3596 32.13 16.5996 30.87 16.5996 29.5C16.5996 28.13 17.3596 26.86 18.7496 25.93C21.7496 23.94 26.6096 23.94 29.5896 25.93C30.9696 26.85 31.7396 28.11 31.7396 29.48C31.7396 30.85 30.9796 32.12 29.5896 33.05C28.0896 34.05 26.1296 34.55 24.1696 34.55ZM19.5796 27.19C18.6196 27.83 18.0996 28.65 18.0996 29.51C18.0996 30.36 18.6296 31.18 19.5796 31.81C22.0696 33.48 26.2696 33.48 28.7596 31.81C29.7196 31.17 30.2396 30.35 30.2396 29.49C30.2396 28.64 29.7096 27.82 28.7596 27.19C26.2696 25.53 22.0696 25.53 19.5796 27.19Z"
+                  fill="#1F5FDB" />
+              </svg>
+            </a>
+            <div class="header-modal">
+              <div class="header-modal__top">
+                <img class="header-modal__icon" src="img/icons/header-verify.svg" width="60" height="60" alt="Иконка">
+                <div class="header-modal__wrapper">
+                  <div class="header-modal__pill">
+                    <span class="header-modal__label">Лицензия:</span>
+                    <span class="header-modal__value blue">Free</span>
+                  </div>
+                  <div class="header-modal__pill">
+                    <span class="header-modal__label">Активна до:</span>
+                    <span class="header-modal__value">03.03.2026</span>
+                  </div>
+                </div>
+              </div>
+              <div class="header-modal__bottom">
+                <div class="header-modal__date">
+                  <span class="header-modal__left">Осталось:</span>
+                  <span class="header-modal__right">15 дней</span>
+                </div>
+                <a class="header-modal__button" href="#">Продлить лицензию</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="tarrifs">
+    <div class="container">
+      <h1 class="tarrifs__title">Все тарифы</h1>
+      <div class="price__block">
+        <div class="price__item">
+          <h3 class="price__caption">Лайт</h3>
+          <p class="price__price">5790 ₽</p>
+          <p class="price__sub">бессрочно</p>
+          <ul class="price__list">
+            <li class="price__point">коробочное решение без интеграции<br> 1С</li>
+            <li class="price__point">добавление товаров через сервер Метафора</li>
+            <li class="price__point">поддержка всех доступных устройств</li>
+            <li class="price__point">работа с маркированной одеждой и обувью</li>
+          </ul>
+          <div class="price__align">
+            <a class="price__link" href="#">Купить сейчас</a>
+          </div>
+        </div>
+        <div class="price__item">
+          <h3 class="price__caption">Про</h3>
+          <p class="price__price">10790 ₽</p>
+          <p class="price__sub">1 год</p>
+          <ul class="price__list">
+            <li class="price__point"> все опции доступные для версии Лайт</li>
+            <li class="price__point">коробочная версия с интеграцией в 1С: Розница</li>
+            <li class="price__point">расширенные функции по безопасности</li>
+            <li class="price__point">базовая программа лояльности</li>
+            <li class="price__point">модуль отчетности</li>
+          </ul>
+          <div class="price__align">
+            <a class="price__link" href="#">Купить сейчас</a>
+          </div>
+        </div>
+        <div class="price__item">
+          <h3 class="price__caption">Проект</h3>
+          <p class="price__price price__price--small">по запросу</p>
+          <p class="price__sub">По согласованию</p>
+          <ul class="price__list">
+            <li class="price__point">интеграция с любыми товароучетными системами</li>
+            <li class="price__point">доработка для поддержки любого оборудования</li>
+            <li class="price__point">гибкая система лицензирования</li>
+            <li class="price__point">адаптация архитектуры под требования клиента</li>
+          </ul>
+          <div class="price__align">
+            <a class="price__link" href="#">Купить сейчас</a>
+          </div>
+        </div>
+        <div class="price__item">
+          <h3 class="price__caption">Лайт</h3>
+          <p class="price__price">5790 ₽</p>
+          <p class="price__sub">бессрочно</p>
+          <ul class="price__list">
+            <li class="price__point">коробочное решение без интеграции<br> 1С</li>
+            <li class="price__point">добавление товаров через сервер Метафора</li>
+            <li class="price__point">поддержка всех доступных устройств</li>
+            <li class="price__point">работа с маркированной одеждой и обувью</li>
+          </ul>
+          <div class="price__align">
+            <a class="price__link" href="#">Купить сейчас</a>
+          </div>
+        </div>
+        <div class="price__item">
+          <h3 class="price__caption">Про</h3>
+          <p class="price__price">10790 ₽</p>
+          <p class="price__sub">1 год</p>
+          <ul class="price__list">
+            <li class="price__point"> все опции доступные для версии Лайт</li>
+            <li class="price__point">коробочная версия с интеграцией в 1С: Розница</li>
+            <li class="price__point">расширенные функции по безопасности</li>
+            <li class="price__point">базовая программа лояльности</li>
+            <li class="price__point">модуль отчетности</li>
+          </ul>
+          <div class="price__align">
+            <a class="price__link" href="#">Купить сейчас</a>
+          </div>
+        </div>
+        <div class="price__item">
+          <h3 class="price__caption">Проект</h3>
+          <p class="price__price price__price--small">по запросу</p>
+          <p class="price__sub">По согласованию</p>
+          <ul class="price__list">
+            <li class="price__point">интеграция с любыми товароучетными системами</li>
+            <li class="price__point">доработка для поддержки любого оборудования</li>
+            <li class="price__point">гибкая система лицензирования</li>
+            <li class="price__point">адаптация архитектуры под требования клиента</li>
+          </ul>
+          <div class="price__align">
+            <a class="price__link" href="#">Купить сейчас</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="left">
+    <div class="container">
+      <h2 class="left__title">Оставить заявку</h2>
+      <form class="left__form" action="/">
+        <input class="left__input" type="text" placeholder="+7 000 000 00 00">
+        <button class="left__button" type="submit">Оставить заявку</button>
+      </form>
+      <label class="left__bottom">
+        <input class="left__checkbox" type="checkbox">
+        даю согласие на обработку <a class="left__privacy" href="#">персональных данных</a>
+      </label>
+    </div>
+  </section>
+  <section class="compare">
+    <div class="container">
+      <h2 class="compare__title">Подробное сравнение тарифов</h2>
+      <div class="compare__tabs tabs">
+        <a class="compare__tab tab active" href="#">Купить на месяц</a>
+        <a class="compare__tab tab" href="#">
+          Купить на год
+          <span class="compare__pill">- 20%</span>
+        </a>
+      </div>
+      <div class="compare__contents contents">
+        <div class="compare__content content active">
+          <div class="compare__global">
+            <div class="compare__labels">
+              <div class="compare__label">Кассы / магазины</div>
+              <div class="compare__label">Чеки в месяц (на кассу)</div>
+              <div class="compare__label">Экспорт чеков (CSV)</div>
+              <div class="compare__label">Продажа/возврат, X-отчёты</div>
+              <div class="compare__label">Поддержка ККТ Атол</div>
+              <div class="compare__label">Поддержка ККТ POSCenter</div>
+              <div class="compare__label">Дисплей покупателя (2-х строчный)</div>
+              <div class="compare__label">Дисплей покупателя (2-й экран)</div>
+              <div class="compare__label">Электронные чеки через ОФД (ККТ)</div>
+              <div class="compare__label">Эквайринг Сбер</div>
+              <div class="compare__label">Эквайринг Альфа (Inpass)</div>
+              <div class="compare__label">СБП (прямая интеграция - POS→СБП-шлюз)</div>
+              <div class="compare__label">Маркировка (ЧЗ) v1 (одежда и обувь)</div>
+              <div class="compare__label">Маркировка (ЧЗ) v2 (расширение всех товарных групп)</div>
+              <div class="compare__label">Весовой товар</div>
+              <div class="compare__label">ЕГАИС</div>
+              <div class="compare__label">Каталог/поиск</div>
+              <div class="compare__label">Остатки</div>
+              <div class="compare__label">Роли и права (Role-Based Access Control)</div>
+              <div class="compare__label">Лояльность</div>
+              <div class="compare__label first">Отчёты/аналитика</div>
+              <div class="compare__label second">Интеграции (1С товары/чеки)</div>
+              <div class="compare__label third">Интеграции с другими ТУС</div>
+              <div class="compare__label fourth">Интеграции с программами лояльности</div>
+              <div class="compare__label">Интеграция c Digital Signage</div>
+              <div class="compare__label">Интеграции по Metafora API</div>
+              <div class="compare__label">Безопасность/аудит</div>
+              <div class="compare__label fifth">Мониторинг/ops</div>
+              <div class="compare__label sixth">Поддержка</div>
+            </div>
+            <div class="compare__main">
+              <div class="compare__item">
+                <h3 class="compare__caption">Free</h3>
+                <p class="compare__subcaption">Для кого оптимально подходит</p>
+                <p class="compare__price">5790 ₽</p>
+                <p class="compare__time">бессрочно</p>
+                <p class="compare__two">
+                  1 <br> <span class="compare__small">касса</span> <br><br>
+                  1 <br> <span class="compare__small">магазин</span>
+                </p>
+                <div class="compare__align">
+                  <a class="compare__buy" href="#">Купить</a>
+                </div>
+                <p class="compare__count">1 касса/1 магазин</p>
+                <p class="compare__count">до 1500 / мес</p>
+                <p class="compare__count">до 4 выгрузок/мес</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <p class="compare__minus">-</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp frs"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp scd"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные роли</b> [MLP]</div>
+                <div class="compare__mlp"><b>X/Z + экспорт<br> чеков (квота)</b><br> [MLP]</div>
+                <div class="compare__mlp"><b>X/Z + экспорт чеков (квота)</b> [MLP]</div>
+                <p class="compare__minus fss">-</p>
+                <p class="compare__minus fss">-</p>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>да</b> [roadmap]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus fss">-</p>
+                <p class="compare__minus fof">-</p>
+                <p class="compare__count last">+телефон, SLA и приоритет</p>
+              </div>
+              <div class="compare__item">
+                <h3 class="compare__caption">Lite</h3>
+                <p class="compare__subcaption first">Для кого оптимально подходит</p>
+                <div class="compare__discount">10790 ₽</div>
+                <div class="compare__price">10790 ₽ <img class="compare__like" src="img/icons/compare-like.svg"
+                    width="26" height="26" alt="Like"></div>
+                <p class="compare__time">1 год</p>
+                <p class="compare__two">
+                  10 <br> <span class="compare__small">касс</span><br><br> 5 <br> <span class="compare__small">магазинов</span>
+                </p>
+                <div class="compare__align">
+                  <a class="compare__buy" href="#">Купить</a>
+                </div>
+                <p class="compare__count">10 касс/5 магазинов</p>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus fss">-</p>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные<br> роли</b> [MLP]</div>
+                <div class="compare__mlp"><b>расширенная / готовые интеграции</b> [MLP]</div>
+                <div class="compare__mlp"><b>базовые отчёты</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> (+акции/<br>скидки/карты)</div>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>да</b> [roadmap]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>базовый аудит</b> [roadmap]</div>
+                <div class="compare__mlp"><b>базовые алерты</b> [roadmap]</div>
+                <p class="compare__count last">+телефон, SLA и приоритет</p>
+              </div>
+              <div class="compare__item">
+                <h3 class="compare__caption">Pro</h3>
+                <p class="compare__subcaption second">Для кого оптимально подходит</p>
+                <div class="compare__discount"><span>108 790 ₽</span> <span class="compare__pill">- 20%</span></div>
+                <div class="compare__price">108 790 ₽</div>
+                <p class="compare__time">1 год</p>
+                <p class="compare__two first">
+                  Неограниченно<br> <span class="compare__small">количество касс и магазинов</span>
+                </p>
+                <div class="compare__align">
+                  <a class="compare__buy" href="#">Купить</a>
+                </div>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные<br> роли</b> [MLP]</div>
+                <div class="compare__mlp"><b>расширенная / готовые интеграции</b> [MLP]</div>
+                <div class="compare__mlp"><b>расширенные<br> отчёты</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> (+акции/скидки/карты)</div>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>да</b> [roadmap]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные дашборды</b> [roadmap]</div>
+                <p class="compare__count last">+телефон, SLA и приоритет</p>
+              </div>
+              <div class="compare__item">
+                <h3 class="compare__caption">Pro</h3>
+                <p class="compare__subcaption third">Для кого оптимально подходит</p>
+                <div class="compare__discount"><span>108 790 ₽</span> <span class="compare__pill">- 20%</span></div>
+                <div class="compare__price">10790 ₽</div>
+                <p class="compare__time">1 год</p>
+                <p class="compare__two fourth">
+                  Неограниченно<br> <span class="compare__small">количество касс и магазинов</span>
+                </p>
+                <div class="compare__align">
+                  <a class="compare__buy" href="#">Купить</a>
+                </div>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные<br> роли</b> [MLP]</div>
+                <div class="compare__mlp"><b>расширенная / готовые интеграции</b> [MLP]</div>
+                <div class="compare__mlp"><b>BI интеграция / кастом</b></div>
+                <div class="compare__mlp"><b>да</b> (+акции/скидки/карты)</div>
+                <div class="compare__mlp"><b>готовые</b> [roadmap]</div>
+                <div class="compare__mlp"><b>готовые</b> [roadmap]</div>
+                <div class="compare__mlp"><b>да</b> [roadmap]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>базовый аудит</b><br> [roadmap]</div>
+                <div class="compare__mlp lat"><b>кастом</b></div>
+                <p class="compare__count last">+телефон, SLA и приоритет</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="compare__content content">
+          <div class="compare__global">
+            <div class="compare__labels">
+              <div class="compare__label">Кассы / магазины</div>
+              <div class="compare__label">Чеки в месяц (на кассу)</div>
+              <div class="compare__label">Экспорт чеков (CSV)</div>
+              <div class="compare__label">Продажа/возврат, X-отчёты</div>
+              <div class="compare__label">Поддержка ККТ Атол</div>
+              <div class="compare__label">Поддержка ККТ POSCenter</div>
+              <div class="compare__label">Дисплей покупателя (2-х строчный)</div>
+              <div class="compare__label">Дисплей покупателя (2-й экран)</div>
+              <div class="compare__label">Электронные чеки через ОФД (ККТ)</div>
+              <div class="compare__label">Эквайринг Сбер</div>
+              <div class="compare__label">Эквайринг Альфа (Inpass)</div>
+              <div class="compare__label">СБП (прямая интеграция - POS→СБП-шлюз)</div>
+              <div class="compare__label">Маркировка (ЧЗ) v1 (одежда и обувь)</div>
+              <div class="compare__label">Маркировка (ЧЗ) v2 (расширение всех товарных групп)</div>
+              <div class="compare__label">Весовой товар</div>
+              <div class="compare__label">ЕГАИС</div>
+              <div class="compare__label">Каталог/поиск</div>
+              <div class="compare__label">Остатки</div>
+              <div class="compare__label">Роли и права (Role-Based Access Control)</div>
+              <div class="compare__label">Лояльность</div>
+              <div class="compare__label first">Отчёты/аналитика</div>
+              <div class="compare__label second">Интеграции (1С товары/чеки)</div>
+              <div class="compare__label third">Интеграции с другими ТУС</div>
+              <div class="compare__label fourth">Интеграции с программами лояльности</div>
+              <div class="compare__label">Интеграция c Digital Signage</div>
+              <div class="compare__label">Интеграции по Metafora API</div>
+              <div class="compare__label">Безопасность/аудит</div>
+              <div class="compare__label fifth">Мониторинг/ops</div>
+              <div class="compare__label sixth">Поддержка</div>
+            </div>
+            <div class="compare__main">
+              <div class="compare__item">
+                <h3 class="compare__caption">Free</h3>
+                <p class="compare__subcaption">Для кого оптимально подходит</p>
+                <p class="compare__price">5790 ₽</p>
+                <p class="compare__time">бессрочно</p>
+                <p class="compare__two">
+                  1 <br> <span class="compare__small">касса</span> <br><br>
+                  1 <br> <span class="compare__small">магазин</span>
+                </p>
+                <div class="compare__align">
+                  <a class="compare__buy" href="#">Купить</a>
+                </div>
+                <p class="compare__count">1 касса/1 магазин</p>
+                <p class="compare__count">до 1500 / мес</p>
+                <p class="compare__count">до 4 выгрузок/мес</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <p class="compare__minus">-</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp frs"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp scd"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные роли</b> [MLP]</div>
+                <div class="compare__mlp"><b>X/Z + экспорт<br> чеков (квота)</b><br> [MLP]</div>
+                <div class="compare__mlp"><b>X/Z + экспорт чеков (квота)</b> [MLP]</div>
+                <p class="compare__minus fss">-</p>
+                <p class="compare__minus fss">-</p>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>да</b> [roadmap]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus fss">-</p>
+                <p class="compare__minus fof">-</p>
+                <p class="compare__count last">+телефон, SLA и приоритет</p>
+              </div>
+              <div class="compare__item">
+                <h3 class="compare__caption">Lite</h3>
+                <p class="compare__subcaption first">Для кого оптимально подходит</p>
+                <div class="compare__discount">10790 ₽</div>
+                <div class="compare__price">10790 ₽ <img class="compare__like" src="img/icons/compare-like.svg"
+                    width="26" height="26" alt="Like"></div>
+                <p class="compare__time">1 год</p>
+                <p class="compare__two">
+                  10 <br> <span class="compare__small">касс</span><br><br> 5 <br> <span class="compare__small">магазинов</span>
+                </p>
+                <div class="compare__align">
+                  <a class="compare__buy" href="#">Купить</a>
+                </div>
+                <p class="compare__count">10 касс/5 магазинов</p>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus fss">-</p>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные<br> роли</b> [MLP]</div>
+                <div class="compare__mlp"><b>расширенная / готовые интеграции</b> [MLP]</div>
+                <div class="compare__mlp"><b>базовые отчёты</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> (+акции/<br>скидки/карты)</div>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>да</b> [roadmap]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>базовый аудит</b> [roadmap]</div>
+                <div class="compare__mlp"><b>базовые алерты</b> [roadmap]</div>
+                <p class="compare__count last">+телефон, SLA и приоритет</p>
+              </div>
+              <div class="compare__item">
+                <h3 class="compare__caption">Pro</h3>
+                <p class="compare__subcaption second">Для кого оптимально подходит</p>
+                <div class="compare__discount"><span>108 790 ₽</span> <span class="compare__pill">- 20%</span></div>
+                <div class="compare__price">108 790 ₽</div>
+                <p class="compare__time">1 год</p>
+                <p class="compare__two first">
+                  Неограниченно<br> <span class="compare__small">количество касс и магазинов</span>
+                </p>
+                <div class="compare__align">
+                  <a class="compare__buy" href="#">Купить</a>
+                </div>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные<br> роли</b> [MLP]</div>
+                <div class="compare__mlp"><b>расширенная / готовые интеграции</b> [MLP]</div>
+                <div class="compare__mlp"><b>расширенные<br> отчёты</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> (+акции/скидки/карты)</div>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>готовые</b><br> [roadmap]</div>
+                <div class="compare__mlp"><b>да</b> [roadmap]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные дашборды</b> [roadmap]</div>
+                <p class="compare__count last">+телефон, SLA и приоритет</p>
+              </div>
+              <div class="compare__item">
+                <h3 class="compare__caption">Pro</h3>
+                <p class="compare__subcaption third">Для кого оптимально подходит</p>
+                <div class="compare__discount"><span>108 790 ₽</span> <span class="compare__pill">- 20%</span></div>
+                <div class="compare__price">10790 ₽</div>
+                <p class="compare__time">1 год</p>
+                <p class="compare__two fourth">
+                  Неограниченно<br> <span class="compare__small">количество касс и магазинов</span>
+                </p>
+                <div class="compare__align">
+                  <a class="compare__buy" href="#">Купить</a>
+                </div>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <p class="compare__count">без ограничений</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__mlp"><b>да</b> [MLP]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <p class="compare__minus">-</p>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>расширенные<br> роли</b> [MLP]</div>
+                <div class="compare__mlp"><b>расширенная / готовые интеграции</b> [MLP]</div>
+                <div class="compare__mlp"><b>BI интеграция / кастом</b></div>
+                <div class="compare__mlp"><b>да</b> (+акции/скидки/карты)</div>
+                <div class="compare__mlp"><b>готовые</b> [roadmap]</div>
+                <div class="compare__mlp"><b>готовые</b> [roadmap]</div>
+                <div class="compare__mlp"><b>да</b> [roadmap]</div>
+                <div class="compare__center">
+                  <img src="img/icons/compare-ok.svg" width="24" height="24" alt="Ok">
+                </div>
+                <div class="compare__mlp"><b>базовый аудит</b><br> [roadmap]</div>
+                <div class="compare__mlp lat"><b>кастом</b></div>
+                <p class="compare__count last">+телефон, SLA и приоритет</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="blue-quote">
+    <div class="container">
+      <div class="quote__main second third">
+        <span class="quote__span">Не знаете как выбрать тариф?</span>
+        Мы поможем!
+        <img class="quote__avatar" src="img/quote-3.jpg" width="160" height="106" loading="lazy" alt="Аватарка">
+      </div>
+      <div class="blue-quote__align">
+        <a class="blue-quote__link" href="#">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__global">
+      <div class="footer__inner">
+        <div class="footer__main">
+          <div class="footer__first">
+            <a class="footer__logo" href="/">
+              <img src="img/logo-footer.svg" width="208" height="45" alt="Лого">
+            </a>
+            <p class="footer__copy">© 2025 Метафора-ТСР. Все права защищены.</p>
+            <a class="footer__privacy" href="#">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__second">
+            <a class="footer__phone" href="tel:+74959990000">+7 (495) 999-00-00</a>
+            <p class="footer__address">115114, г.Москва, Дербеневская наб., д.7, стр.16, пом.2</p>
+            <a class="footer__mail" href="mailto:info@m-tsr.ru">info@m-tsr.ru</a>
+            <div class="footer__socials">
+              <a class="footer__social" href="#" target="_blank">
+                <img src="img/icons/footer-vk.svg" width="32" height="32" alt="Вконтакте">
+              </a>
+              <a class="footer__social" href="#" target="_blank">
+                <img src="img/icons/footer-tg.svg" width="32" height="32" alt="Telegram">
+              </a>
+              <a class="footer__social" href="#" target="_blank">
+                <img src="img/icons/footer-rutube.svg" width="32" height="32" alt="Rutube">
+              </a>
+            </div>
+          </div>
+          <div class="footer__third">
+            <a class="footer__lk" href="#">
+              <svg class="footer__icon" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="24" fill="#1F5FDB" />
+                <path
+                  d="M24.1596 23.62C24.1296 23.62 24.1096 23.62 24.0796 23.62C24.0296 23.61 23.9596 23.61 23.8996 23.62C20.9996 23.53 18.8096 21.25 18.8096 18.44C18.8096 15.58 21.1396 13.25 23.9996 13.25C26.8596 13.25 29.1896 15.58 29.1896 18.44C29.1796 21.25 26.9796 23.53 24.1896 23.62C24.1796 23.62 24.1696 23.62 24.1596 23.62ZM23.9996 14.75C21.9696 14.75 20.3096 16.41 20.3096 18.44C20.3096 20.44 21.8696 22.05 23.8596 22.12C23.9096 22.11 24.0496 22.11 24.1796 22.12C26.1396 22.03 27.6796 20.42 27.6896 18.44C27.6896 16.41 26.0296 14.75 23.9996 14.75Z"
+                  fill="white" />
+                <path
+                  d="M24.1696 34.55C22.2096 34.55 20.2396 34.05 18.7496 33.05C17.3596 32.13 16.5996 30.87 16.5996 29.5C16.5996 28.13 17.3596 26.86 18.7496 25.93C21.7496 23.94 26.6096 23.94 29.5896 25.93C30.9696 26.85 31.7396 28.11 31.7396 29.48C31.7396 30.85 30.9796 32.12 29.5896 33.05C28.0896 34.05 26.1296 34.55 24.1696 34.55ZM19.5796 27.19C18.6196 27.83 18.0996 28.65 18.0996 29.51C18.0996 30.36 18.6296 31.18 19.5796 31.81C22.0696 33.48 26.2696 33.48 28.7596 31.81C29.7196 31.17 30.2396 30.35 30.2396 29.49C30.2396 28.64 29.7096 27.82 28.7596 27.19C26.2696 25.53 22.0696 25.53 19.5796 27.19Z"
+                  fill="white" />
+              </svg>
+
+              Личный кабинет
+            </a>
+          </div>
+          <div class="footer__fourth">
+            <nav class="footer__nav">
+              <a class="footer__link" href="#">Помощь</a>
+              <a class="footer__link" href="#">Блог</a>
+              <a class="footer__link footer__link--under" href="#">События</a>
+              <a class="footer__link" href="#">Тарифы</a>
+              <a class="footer__link" href="#">Возможности</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button class="button-up">
+    <img src="img/icons/button-up.svg" width="70" height="70" alt="Вверх">
+  </button>
+
+  <script src="js/swiper.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
