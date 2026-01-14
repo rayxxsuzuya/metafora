@@ -1,4 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('[data-modal]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalId = btn.getAttribute('data-modal');
+      const modalWindow = document.getElementById(modalId);
+      if (modalWindow) {
+        const modal = modalWindow.closest('.modal');
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    });
+  });
+
+  function closeModal(modal) {
+    modal.classList.remove('active');
+    if (!document.querySelector('.modal.active')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.querySelectorAll('.modal__close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+      const modal = closeBtn.closest('.modal');
+      if (modal) {
+        closeModal(modal);
+      }
+    });
+  });
+
+  document.querySelectorAll('.modal__bg').forEach(bg => {
+    bg.addEventListener('click', () => {
+      const modal = bg.closest('.modal');
+      if (modal) {
+        closeModal(modal);
+      }
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const button = document.querySelector('.header__button');
   const modal = document.querySelector('.header-modal');
 
@@ -36,7 +80,9 @@ const pageSlider = new Swiper('.page-slider__slider', {
   slidesPerView: 1,
   spaceBetween: 30,
   centeredSlides: true,
-  loop: true,
+  centeredSlidesBounds: true,
+  loop: false,
+  initialSlide: 1,
 
   pagination: {
     el: '.page-slider .swiper-pagination',
@@ -53,7 +99,9 @@ const blogSlider = new Swiper('.blog__slider', {
   slidesPerView: 'auto',
   spaceBetween: 30,
   centeredSlides: true,
-  loop: true,
+  centeredSlidesBounds: true,
+  loop: false,
+  initialSlide: 2,
 });
 
 const eventsSlider = new Swiper('.events__slider', {
@@ -98,5 +146,67 @@ for (let i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.modal__tab');
+  const contents = document.querySelectorAll('.modal__content');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Удаляем класс active у всех вкладок
+      tabs.forEach(t => t.classList.remove('active'));
+      // Добавляем класс active к текущей вкладке
+      tab.classList.add('active');
+
+      // Убираем active у всех содержимых
+      contents.forEach(c => c.classList.remove('active'));
+      // Добавляем active к содержимому по индексу
+      contents[index].classList.add('active');
+    });
+  });
+});
+
+if (document.querySelector('.phone')) {
+  var phoneInputs = document.querySelectorAll('.phone');
+
+  phoneInputs.forEach(phoneInput => {
+    phoneInput.onfocus = function (e) {
+      e.target.setAttribute('placeholder', '+7 (000) 000-00-00');
+    };
+
+    phoneInput.addEventListener('focusout', function (e) {
+      e.target.setAttribute('placeholder', '');
+    });
+    phoneInput.addEventListener('keydown', function (event) {
+      if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
+        event.preventDefault();
+      }
+
+      var mask = '+7 (111) 111-11-11'; 
+
+      if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+        var currentString = this.value;
+        var currentLength = currentString.length;
+
+        if (/[0-9]/.test(event.key)) {
+          if (mask[currentLength] == '1') {
+            this.value = currentString + event.key;
+          } else {
+            for (var i = currentLength; i < mask.length; i++) {
+              if (mask[i] == '1') {
+                this.value = currentString + event.key;
+                break;
+              }
+
+              currentString += mask[i];
+            }
+          }
+        }
+      }
+    });
   });
 }

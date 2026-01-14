@@ -15,6 +15,382 @@
 </head>
 
 <body>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="firstModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Регистрация</h2>
+      <form class="modal__form" action="/">
+        <div class="modal__outer">
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Имя:</label>
+              <input class="modal__input" type="text" placeholder="Иван">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Фамилия:</label>
+              <input class="modal__input" type="text" placeholder="Иванов">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Телефон:</label>
+              <input class="modal__input phone" type="text" placeholder="+7 903 555 5555">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">E-mail:</label>
+              <input class="modal__input" type="email" placeholder="ivanon.ivan@gmail.com">
+            </div>
+          </div>
+          <div class="modal__capsule long">
+            <div class="modal__wrapper">
+              <label class="modal__label">Компания</label>
+              <input class="modal__input" type="text" placeholder="ИП Иванов и Ивановы">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">ИНН</label>
+              <input class="modal__input" type="text" placeholder="123456789012">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">КПП</label>
+              <input class="modal__input" type="text" placeholder="123456789">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Придумайте пароль</label>
+              <input class="modal__input" type="password" placeholder="*** ***">
+              <div class="modal__addit">
+                <img src="img/icons/modal-ok.svg" width="24" height="24" alt="Верно">
+              </div>
+            </div>
+          </div>
+          <div class="modal__capsule"></div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Повторите пароль</label>
+              <input class="modal__input" type="password" placeholder="*** ***">
+              <div class="modal__addit">
+                <img src="img/icons/modal-not.svg" width="24" height="24" alt="Неверно">
+                Пароли не совпадают
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal__align">
+          <button class="modal__submit" type="submit">Зарегистировать</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="secondModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Регистрация</h2>
+      <form class="modal__form-second" action="/">
+        <div class="modal__form-second-inner">
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Придумайте пароль</label>
+              <input class="modal__input" type="password" placeholder="*** ***">
+            </div>
+          </div>
+        </div>
+        <div class="modal__align">
+          <button class="modal__submit" type="submit">Зарегистировать</button>
+        </div>
+        <p class="modal__small">Код подтверждения отправлен вам на e-mail. <a class="modal__again" href="#">Отправить
+            код повторно</a></p>
+      </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="thirdModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title second">Спасибо! Ваш аккаунт успешно зарегестрирован.</h2>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="fourthModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Восстановить пароль</h2>
+      <form class="modal__form-second" action="/">
+        <div class="modal__form-second-inner">
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Введите номер телефона</label>
+              <input class="modal__input phone" type="password" placeholder="+7 499 999 0000">
+            </div>
+          </div>
+        </div>
+        <div class="modal__align">
+          <button class="modal__submit" type="submit">Отправить код подтверждения</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="fifthModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Восстановить пароль</h2>
+      <form class="modal__form-second" action="/">
+        <div class="modal__form-second-inner">
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Введите код подтверждения</label>
+              <input class="modal__input" type="password" placeholder="*** ***">
+            </div>
+          </div>
+        </div>
+        <div class="modal__align">
+          <button class="modal__submit" type="submit">Продолжить</button>
+        </div>
+        <p class="modal__small">Код подтверждения отправлен вам на телефон. <a class="modal__again" href="#">Отправить
+            код повторно</a></p>
+      </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="sixthModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Восстановить пароль</h2>
+      <form class="modal__form-second" action="/">
+        <div class="modal__form-second-inner third">
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Введите новый пароль</label>
+              <input class="modal__input" type="password" placeholder="*** ***">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Повторите пароль</label>
+              <input class="modal__input" type="password" placeholder="*** ***">
+            </div>
+          </div>
+        </div>
+        <div class="modal__align">
+          <button class="modal__submit" type="submit">Продолжить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="seventhModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title second">Ваш пароль успешно изменен</h2>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="eighthModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Оставить заявку</h2>
+      <form class="modal__form-second" action="/">
+        <div class="modal__form-second-inner">
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Телефон:</label>
+              <input class="modal__input phone" type="password" placeholder="+7 903 555 5555">
+            </div>
+          </div>
+        </div>
+        <div class="modal__align">
+          <button class="modal__submit" type="submit">Отправить</button>
+        </div>
+        <label class="modal__checkbox">
+          <input class="modal__check" type="checkbox" checked>
+          даю согласие на обработку <a class="modal__privacy" href="#">персональных данных</a>
+        </label>
+      </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="ninethModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Вход</h2>
+      <form class="modal__form-second" action="/">
+        <div class="modal__form-second-inner third">
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Номер телефона</label>
+              <input class="modal__input phone" type="text" placeholder="+7 999 555 0000">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Пароль</label>
+              <input class="modal__input phone" type="password" placeholder="*** ***">
+            </div>
+          </div>
+        </div>
+        <div class="modal__align">
+          <button class="modal__submit" type="submit">Войти</button>
+        </div>
+        <p class="modal__small"><a class="modal__again" href="#">Регистрация</a></p>
+      </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="tenthModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Оформить заказ</h2>
+      <form class="modal__form" action="/">
+        <div class="modal__outer">
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Имя:</label>
+              <input class="modal__input" type="text" placeholder="Иван">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Фамилия:</label>
+              <input class="modal__input" type="text" placeholder="Иванов">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">Телефон:</label>
+              <input class="modal__input phone" type="text" placeholder="+7 903 555 5555">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">E-mail:</label>
+              <input class="modal__input" type="email" placeholder="ivanon.ivan@gmail.com">
+            </div>
+          </div>
+          <div class="modal__capsule long">
+            <div class="modal__wrapper">
+              <label class="modal__label">Компания</label>
+              <input class="modal__input" type="text" placeholder="ИП Иванов и Ивановы">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">ИНН</label>
+              <input class="modal__input" type="text" placeholder="123456789012">
+            </div>
+          </div>
+          <div class="modal__capsule">
+            <div class="modal__wrapper">
+              <label class="modal__label">КПП</label>
+              <input class="modal__input" type="text" placeholder="123456789">
+            </div>
+          </div>
+        </div>
+        <p class="modal__ord">Состав заказа:</p>
+        <div class="modal__row">
+          <img class="modal__first" src="img/icons/modal-shield.svg" width="48" height="48" alt="Иконка">
+          <div class="modal__do">
+            <div class="modal_la">Лицензия:</div>
+            <div class="modal_li">Free</div>
+          </div>
+          <div class="modal__all">
+            <div class="modal__sum">Сумма заказа:</div>
+            <div class="modal__price">96 783 ₽</div>
+          </div>
+        </div>
+        <div class="modal__tabs">
+          <a class="modal__tab active" href="#">Платежная система</a>
+          <a class="modal__tab" href="#">Сформировать счет</a>
+        </div>
+        <div class="modal__contents">
+          <div class="modal__content active">
+            <div class="modal__middle">
+              <div class="modal__pill">
+                <input class="modal__input" type="text" placeholder="Номер карты">
+              </div>
+              <div class="modal__pill">
+                <input class="modal__input" type="text" placeholder="Имя держателя карты">
+              </div>
+              <div class="modal__pill small">
+                <input class="modal__input" type="text" placeholder="Срок действия">
+              </div>
+              <div class="modal__pill small">
+                <input class="modal__input last" type="text" placeholder=" CVC/CVV">
+              </div>
+            </div>
+          </div>
+          <div class="modal__content">
+            <div class="modal__middle">
+              <div class="modal__pill">
+                <input class="modal__input" type="text" placeholder="Номер карты 2">
+              </div>
+              <div class="modal__pill">
+                <input class="modal__input" type="text" placeholder="Имя держателя карты 2">
+              </div>
+              <div class="modal__pill small">
+                <input class="modal__input" type="text" placeholder="Срок действия 2">
+              </div>
+              <div class="modal__pill small">
+                <input class="modal__input last" type="text" placeholder=" CVC/CVV">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__align">
+          <button class="modal__submit" type="submit">Продолжить</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="elevenModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="16" height="15" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title third">Заказ №<span class="modal__bold">3647- 36387</span> успешно оформлен. <br> Наш
+        менеджер свяжется с вами в ближайшее время </h2>
+      <div class="modal__back">
+        <div class="modal__then">Возвращение на сайт через</div>
+        <div class="modal__count">5</div>
+      </div>
+    </div>
+  </div>
+
   <div class="main-global">
     <header class="header">
       <div class="container">
@@ -33,7 +409,7 @@
             </nav>
             <a class="header__phone" href="tel:+74959990000">+7 (495) 999-00-00</a>
             <div class="header__lk">
-              <a class="header__button" href="#">
+              <a class="header__button" href="#" data-modal="ninethModal" data-form-name="Мы поможем">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="48" height="48" rx="24" fill="white" />
                   <path
@@ -71,6 +447,74 @@
         </div>
       </div>
     </header>
+    <div class="container">
+      <!-- <a class="main-button" href="#" data-modal="firstModal" data-form-name="Мы поможем">
+        Первый
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="secondModal" data-form-name="Мы поможем">
+        Второй
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="thirdModal" data-form-name="Мы поможем">
+        Третий
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="fourthModal" data-form-name="Мы поможем">
+        Четвертый
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="fifthModal" data-form-name="Мы поможем">
+        Пятый
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="sixthModal" data-form-name="Мы поможем">
+        Шестой
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="seventhModal" data-form-name="Мы поможем">
+        Седьмой
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="eighthModal" data-form-name="Мы поможем">
+        Восьмой
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="ninethModal" data-form-name="Мы поможем">
+        Девятый
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="tenthModal" data-form-name="Мы поможем">
+        Десятый
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a>
+      <a class="main-button" href="#" data-modal="elevenModal" data-form-name="Мы поможем">
+        Одиннадцатый
+        <span class="main-button__arrow">
+          <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+        </span>
+      </a> -->
+    </div>
     <section class="hero">
       <div class="container">
         <h1 class="hero__title">Управляйте продажами легко, выгодно и безопасно</h1>
@@ -333,11 +777,11 @@
     <div class="container">
       <h2 class="left__title">Оставить заявку</h2>
       <form class="left__form" action="/">
-        <input class="left__input" type="text" placeholder="+7 000 000 00 00">
+        <input class="left__input phone" type="text" placeholder="+7 000 000 00 00">
         <button class="left__button" type="submit">Оставить заявку</button>
       </form>
       <label class="left__bottom">
-        <input class="left__checkbox" type="checkbox">
+        <input class="left__checkbox" type="checkbox" checked>
         даю согласие на обработку <a class="left__privacy" href="#">персональных данных</a>
       </label>
     </div>
@@ -360,6 +804,11 @@
             <div class="swiper-slide page-slider__slide">
               <h3 class="page-slider__caption">Возврат товара</h3>
               <img class="page-slider__image" src="img/page-slider-3.svg" width="1147" height="698" loading="lazy"
+                alt="Картинки">
+            </div>
+            <div class="swiper-slide page-slider__slide">
+              <h3 class="page-slider__caption">Продажа и использование<br> сертификата</h3>
+              <img class="page-slider__image" src="img/page-slider-2.svg" width="1147" height="698" loading="lazy"
                 alt="Картинки">
             </div>
           </div>
@@ -540,11 +989,11 @@
     <div class="container">
       <h2 class="left__title">Оставить заявку</h2>
       <form class="left__form" action="/">
-        <input class="left__input" type="text" placeholder="+7 000 000 00 00">
+        <input class="left__input phone" type="text" placeholder="+7 000 000 00 00">
         <button class="left__button" type="submit">Оставить заявку</button>
       </form>
       <label class="left__bottom">
-        <input class="left__checkbox" type="checkbox">
+        <input class="left__checkbox" type="checkbox" checked>
         даю согласие на обработку <a class="left__privacy" href="#">персональных данных</a>
       </label>
     </div>
@@ -961,7 +1410,7 @@
             </div>
           </div>
           <div class="footer__third">
-            <a class="footer__lk" href="#">
+            <a class="footer__lk" href="#" data-modal="ninethModal" data-form-name="Мы поможем">
               <svg class="footer__icon" width="48" height="48" viewBox="0 0 48 48" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="48" height="48" rx="24" fill="#1F5FDB" />
@@ -980,7 +1429,7 @@
             <nav class="footer__nav">
               <a class="footer__link" href="#">Помощь</a>
               <a class="footer__link" href="#">Блог</a>
-              <a class="footer__link footer__link--under" href="#">События</a>
+              <a class="footer__link" href="#">События</a>
               <a class="footer__link" href="#">Тарифы</a>
               <a class="footer__link" href="#">Возможности</a>
             </nav>
