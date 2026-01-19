@@ -1,3 +1,23 @@
+const headerBurger = document.querySelector('.header__open');
+const headerMobile = document.querySelector('.header-mobile');
+const headerMobileBg = document.querySelector('.header-mobile__bg');
+const headerMobileClose = document.querySelector('.header-mobile__close');
+
+headerBurger.addEventListener('click', () => {
+  headerBurger.classList.toggle('active');
+  headerMobile.classList.toggle('active');
+});
+
+headerMobileBg.addEventListener('click', () => {
+  headerBurger.classList.remove('active');
+  headerMobile.classList.remove('active');
+})
+
+headerMobileClose.addEventListener('click', () => {
+  headerBurger.classList.remove('active');
+  headerMobile.classList.remove('active');
+})
+
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('[data-modal]');
 
@@ -101,13 +121,38 @@ const blogSlider = new Swiper('.blog__slider', {
   centeredSlides: true,
   centeredSlidesBounds: true,
   loop: false,
-  initialSlide: 2,
+  breakpoints: {
+    700: {
+      spaceBetween: 16,
+      initialSlide: 2,
+
+    },
+    1: {
+      centeredSlides: false,
+      centeredSlidesBounds: false,
+    }
+  },
 });
 
 const eventsSlider = new Swiper('.events__slider', {
   slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
+  breakpoints: {
+    1100: {
+      slidesPerView: 4,
+    },
+    900: {
+      slidesPerView: 3,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+    1: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    }
+  },
 });
 
 const buttonUp = document.querySelector('.button-up');
@@ -138,7 +183,7 @@ if (acc.length > 0) {
 
 // Обработчики клика для всех аккордионов
 for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
     const panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
@@ -170,6 +215,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.compare__tab');
+  const contents = document.querySelectorAll('.compare__content');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Удаляем класс active у всех вкладок
+      tabs.forEach(t => t.classList.remove('active'));
+      // Добавляем класс active к текущей вкладке
+      tab.classList.add('active');
+
+      // Убираем active у всех содержимых
+      contents.forEach(c => c.classList.remove('active'));
+      // Добавляем active к содержимому по индексу
+      contents[index].classList.add('active');
+    });
+  });
+});
+
+if (document.querySelector('.help__int')) {
+ document.addEventListener('DOMContentLoaded', function() {
+  const helpInt = document.querySelector('.help__int');
+  const helpLeft = document.querySelector('.help__left');
+  if (helpInt && helpLeft) {
+    helpInt.addEventListener('click', function() {
+      this.style.display = 'none';
+      helpLeft.style.display = 'block';
+    });
+  }
+});
+}
+
 if (document.querySelector('.phone')) {
   var phoneInputs = document.querySelectorAll('.phone');
 
@@ -186,7 +265,7 @@ if (document.querySelector('.phone')) {
         event.preventDefault();
       }
 
-      var mask = '+7 (111) 111-11-11'; 
+      var mask = '+7 (111) 111-11-11';
 
       if (/[0-9\+\ \-\(\)]/.test(event.key)) {
         var currentString = this.value;

@@ -390,13 +390,45 @@
       </div>
     </div>
   </div>
-
+  <div class="header-mobile">
+    <div class="header-mobile__bg"></div>
+    <div class="header-mobile__inner">
+      <div class="header-mobile__top">
+        <a class="header-mobile__logo" href="/">
+          <img src="img/logo.svg" width="150" height="32" alt="Метафора касса">
+        </a>
+        <a class="header__button" href="#" data-modal="ninethModal" data-form-name="Мы поможем">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="48" height="48" rx="24" fill="white" />
+                  <path
+                    d="M24.1596 23.62C24.1296 23.62 24.1096 23.62 24.0796 23.62C24.0296 23.61 23.9596 23.61 23.8996 23.62C20.9996 23.53 18.8096 21.25 18.8096 18.44C18.8096 15.58 21.1396 13.25 23.9996 13.25C26.8596 13.25 29.1896 15.58 29.1896 18.44C29.1796 21.25 26.9796 23.53 24.1896 23.62C24.1796 23.62 24.1696 23.62 24.1596 23.62ZM23.9996 14.75C21.9696 14.75 20.3096 16.41 20.3096 18.44C20.3096 20.44 21.8696 22.05 23.8596 22.12C23.9096 22.11 24.0496 22.11 24.1796 22.12C26.1396 22.03 27.6796 20.42 27.6896 18.44C27.6896 16.41 26.0296 14.75 23.9996 14.75Z"
+                    fill="#1F5FDB" />
+                  <path
+                    d="M24.1696 34.55C22.2096 34.55 20.2396 34.05 18.7496 33.05C17.3596 32.13 16.5996 30.87 16.5996 29.5C16.5996 28.13 17.3596 26.86 18.7496 25.93C21.7496 23.94 26.6096 23.94 29.5896 25.93C30.9696 26.85 31.7396 28.11 31.7396 29.48C31.7396 30.85 30.9796 32.12 29.5896 33.05C28.0896 34.05 26.1296 34.55 24.1696 34.55ZM19.5796 27.19C18.6196 27.83 18.0996 28.65 18.0996 29.51C18.0996 30.36 18.6296 31.18 19.5796 31.81C22.0696 33.48 26.2696 33.48 28.7596 31.81C29.7196 31.17 30.2396 30.35 30.2396 29.49C30.2396 28.64 29.7096 27.82 28.7596 27.19C26.2696 25.53 22.0696 25.53 19.5796 27.19Z"
+                    fill="#1F5FDB" />
+                </svg>
+              </a>
+        <div class="header-mobile__close">
+          <img src="img/icons/header-close.svg" width="48" height="48" alt="Закрыть меню">
+        </div>
+      </div>
+      <nav class="header-mobile__nav">
+        <a class="header__link" href="#">Возможности</a>
+        <a class="header__link" href="#">Тарифы</a>
+        <a class="header__link" href="#">Блог</a>
+        <a class="header__link" href="#">События</a>
+        <a class="header__link" href="#">Помощь</a>
+        <a class="header__link" href="tel:+74959990000">+7 (495) 999-00-00</a>
+      </nav>
+    </div>
+  </div>
   <div class="main-global">
     <header class="header">
       <div class="container">
         <div class="header__block">
           <a class="header__logo" href="#">
             <img class="header__first" src="img/logo.svg" width="208" height="44" alt="Метафора касса">
+            <img class="header__first mobile" src="img/logo-mobile.svg" width="51" height="33" alt="Метафора касса">
             <img class="header__second" src="img/logo-fixed.svg" width="208" height="44" alt="Метафора касса">
           </a>
           <div class="header__main">
@@ -420,6 +452,7 @@
                     fill="#1F5FDB" />
                 </svg>
               </a>
+              
               <div class="header-modal">
                 <div class="header-modal__top">
                   <img class="header-modal__icon" src="img/icons/header-verify.svg" width="60" height="60" alt="Иконка">
@@ -443,6 +476,14 @@
                 </div>
               </div>
             </div>
+            <button class="header__open">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="48" height="48" rx="24" fill="white" />
+                  <line x1="13" y1="31.2" x2="35" y2="31.2" stroke="#1F5FDB" stroke-width="2" stroke-linecap="round" />
+                  <line x1="13" y1="16" x2="35" y2="16" stroke="#1F5FDB" stroke-width="2" stroke-linecap="round" />
+                  <line x1="13" y1="23.6" x2="35" y2="23.6" stroke="#1F5FDB" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
           </div>
         </div>
       </div>
@@ -544,7 +585,7 @@
         сервиса
         <img class="quote__avatar" src="img/quote-3.jpg" width="160" height="106" loading="lazy" alt="Аватарка">
       </div>
-      <p class="quote__bottom">...чтобы предложить ры нку по-настоящему <span class="quote__light">уникальный
+      <p class="quote__bottom">...чтобы предложить рынку по-настоящему <span class="quote__light">уникальный
           продукт</span></p>
     </div>
   </section>
@@ -563,6 +604,9 @@
             <li class="price__point">поддержка всех доступных устройств</li>
             <li class="price__point">работа с маркированной одеждой и обувью</li>
           </ul>
+          <div class="price__center">
+            <a class="price__details" href="#">Детали</a>
+          </div>
           <div class="price__align">
             <a class="price__link" href="#">Купить сейчас</a>
           </div>
@@ -578,6 +622,9 @@
             <li class="price__point">базовая программа лояльности</li>
             <li class="price__point">модуль отчетности</li>
           </ul>
+          <div class="price__center">
+            <a class="price__details" href="#">Детали</a>
+          </div>
           <div class="price__align">
             <a class="price__link" href="#">Купить сейчас</a>
           </div>
@@ -592,13 +639,19 @@
             <li class="price__point">гибкая система лицензирования</li>
             <li class="price__point">адаптация архитектуры под требования клиента</li>
           </ul>
+          <div class="price__center">
+            <a class="price__details" href="#">Детали</a>
+          </div>
           <div class="price__align">
             <a class="price__link" href="#">Купить сейчас</a>
           </div>
         </div>
       </div>
+      <div class="price__get">
+        <a class="price__all" href="#">Посмотреть все тарифы</a>
+      </div>
       <div class="price__bottom">
-        <a class="price__more" href="#">Посмотреть все тарифы</a>
+        <a class="price__more" href="#">ПОЛУЧИТЬ БЕСПЛАТНО</a>
       </div>
     </div>
   </section>
@@ -645,6 +698,8 @@
             </div>
           </div>
           <img class="learn__image" src="img/learn-1.jpg" width="800" height="651" loading="lazy" alt="Картинка">
+          <img class="learn__image mobile" src="img/learn-1-mobile.jpg" width="327" height="461" loading="lazy"
+            alt="Картинка">
         </div>
       </div>
       <div class="learn__middle">
@@ -655,7 +710,7 @@
         <div class="learn__block">
           <div class="learn__pill first">
             <img class="learn__ok" src="img/icons/learn-ok.svg" width="24" height="24" alt="Иконка">
-            <p class="learn__text"><span class="learn__strong">Легкая адаптация</span> к изменениям с минимальным
+            <p class="learn__text"><span class="learn__strong">Легкая адаптация</span> к изменениям с&nbsp;минимальным
               участием ИТ-специалистов.</p>
           </div>
           <div class="learn__pill second">
@@ -676,6 +731,8 @@
           </div>
         </div>
         <img class="learn__picture" src="img/learn-2.jpg" width="888" height="720" loading="lazy" alt="Картинка">
+        <img class="learn__picture mobile" src="img/learn-2-mobile.jpg" width="333" height="500" loading="lazy"
+          alt="Картинка">
       </div>
     </div>
   </section>
@@ -689,6 +746,8 @@
         <div class="kassa__bg">
           <p class="kassa__label">Вход в систему <br> и открытие смены</p>
           <img class="kassa__image" src="img/kassa-image.svg" width="1164" height="569" loading="lazy" alt="Картинка">
+          <img class="kassa__image mobile" src="img/kassa-image-mobile.svg" width="248" height="220" loading="lazy"
+            alt="Картинка">
         </div>
       </div>
     </div>
@@ -795,21 +854,29 @@
               <h3 class="page-slider__caption">Возврат товара</h3>
               <img class="page-slider__image" src="img/page-slider-1.svg" width="1147" height="698" loading="lazy"
                 alt="Картинки">
+              <img class="page-slider__image mobile" src="img/page-slider-1-mobile.svg" width="327" height="375"
+                loading="lazy" alt="Картинки">
             </div>
             <div class="swiper-slide page-slider__slide">
               <h3 class="page-slider__caption">Продажа и использование<br> сертификата</h3>
               <img class="page-slider__image" src="img/page-slider-2.svg" width="1147" height="698" loading="lazy"
                 alt="Картинки">
+              <img class="page-slider__image mobile" src="img/page-slider-2-mobile.svg" width="327" height="392"
+                loading="lazy" alt="Картинки">
             </div>
             <div class="swiper-slide page-slider__slide">
               <h3 class="page-slider__caption">Возврат товара</h3>
               <img class="page-slider__image" src="img/page-slider-3.svg" width="1147" height="698" loading="lazy"
                 alt="Картинки">
+              <img class="page-slider__image mobile" src="img/page-slider-3-mobile.svg" width="290" height="348"
+                loading="lazy" alt="Картинки">
             </div>
             <div class="swiper-slide page-slider__slide">
               <h3 class="page-slider__caption">Продажа и использование<br> сертификата</h3>
               <img class="page-slider__image" src="img/page-slider-2.svg" width="1147" height="698" loading="lazy"
                 alt="Картинки">
+              <img class="page-slider__image mobile" src="img/page-slider-2-mobile.svg" width="327" height="392"
+                loading="lazy" alt="Картинки">
             </div>
           </div>
           <div class="swiper-button-prev page-slider__arrow prev">
@@ -1433,6 +1500,10 @@
               <a class="footer__link" href="#">Тарифы</a>
               <a class="footer__link" href="#">Возможности</a>
             </nav>
+          </div>
+          <div class="footer__last">
+            <p class="footer__copy">© 2025 Метафора-ТСР. Все права защищены.</p>
+            <a class="footer__privacy" href="#">Политика конфиденциальности</a>
           </div>
         </div>
       </div>
