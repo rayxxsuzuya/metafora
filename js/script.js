@@ -209,6 +209,48 @@ const keySlider = new Swiper('.key__slider', {
   },
 });
 
+const compareSlider1 = new Swiper('.compare__slider.first', {
+  slidesPerView: 4,
+  spaceBetween: 8,
+  loop: false,
+  breakpoints: {
+    1100: {
+      slidesPerView: 4,
+    },
+    900: {
+      slidesPerView: 3,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+    1: {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+    }
+  },
+});
+
+const compareSlider2 = new Swiper('.compare__slider.second', {
+  slidesPerView: 4,
+  spaceBetween: 8,
+  loop: false,
+  breakpoints: {
+    1100: {
+      slidesPerView: 4,
+    },
+    900: {
+      slidesPerView: 3,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+    1: {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+    }
+  },
+});
+
 const buttonUp = document.querySelector('.button-up');
 
 window.addEventListener('scroll', () => {
