@@ -128,6 +128,8 @@ const blogSlider = new Swiper('.blog__slider', {
 
     },
     1: {
+      initialSlide: 0,
+      spaceBetween: 16,
       centeredSlides: false,
       centeredSlidesBounds: false,
     }
@@ -151,7 +153,59 @@ const eventsSlider = new Swiper('.events__slider', {
     1: {
       slidesPerView: 'auto',
       spaceBetween: 16,
+      loop: false,
     }
+  },
+});
+
+const priceSlider = new Swiper('.price__slider', {
+  slidesPerView: 4,
+  spaceBetween: 24,
+  loop: false,
+  breakpoints: {
+    1100: {
+      slidesPerView: 4,
+    },
+    800: {
+      slidesPerView: 3,
+    },
+    1: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    }
+  },
+});
+
+const poinSlider = new Swiper('.poin__slider', {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  loop: false,
+  breakpoints: {
+    1000: {
+      slidesPerView: 3,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+    1: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    }
+  },
+});
+
+const keySlider = new Swiper('.key__slider', {
+  slidesPerView: 3,
+  spaceBetween: 0,
+  loop: false,
+  breakpoints: {
+    900: {
+      spaceBetween: 0
+    },
+    1: {
+      spaceBetween: 16,
+      slidesPerView: 'auto',
+    },
   },
 });
 

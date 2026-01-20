@@ -141,7 +141,7 @@
           <div class="modal__capsule">
             <div class="modal__wrapper">
               <label class="modal__label">Введите номер телефона</label>
-              <input class="modal__input phone" type="password" placeholder="+7 499 999 0000">
+              <input class="modal__input phone" type="text" placeholder="+7 499 999 0000">
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@
           <div class="modal__capsule">
             <div class="modal__wrapper">
               <label class="modal__label">Телефон:</label>
-              <input class="modal__input phone" type="password" placeholder="+7 903 555 5555">
+              <input class="modal__input phone" type="text" placeholder="+7 903 555 5555">
             </div>
           </div>
         </div>
@@ -593,8 +593,26 @@
     <div class="container">
       <h2 class="price__title">Стоимость</h2>
       <p class="price__subtitle">У нас есть решение для бизнеса любого размера в розничной торговле.</p>
-      <div class="price__block">
-        <div class="price__item">
+      <div class="swiper price__slider">
+        <div class="price__block swiper-wrapper">
+          <div class="price__item swiper-slide">
+          <h3 class="price__caption">Free</h3>
+          <p class="price__price price__price--small">по запросу</p>
+          <p class="price__sub">бессрочно</p>
+          <ul class="price__list">
+            <li class="price__point">интеграция с любыми товароучетными системами</li>
+            <li class="price__point">доработка для поддержки любого оборудования</li>
+            <li class="price__point">гибкая система лицензирования</li>
+            <li class="price__point">адаптация архитектуры под требования клиента</li>
+          </ul>
+          <div class="price__center">
+            <a class="price__details" href="#">Детали</a>
+          </div>
+          <div class="price__align">
+            <a class="price__link" href="#">Купить сейчас</a>
+          </div>
+        </div>
+        <div class="price__item swiper-slide">
           <h3 class="price__caption">Лайт</h3>
           <p class="price__price">5790 ₽</p>
           <p class="price__sub">бессрочно</p>
@@ -611,10 +629,10 @@
             <a class="price__link" href="#">Купить сейчас</a>
           </div>
         </div>
-        <div class="price__item">
+        <div class="price__item swiper-slide">
           <h3 class="price__caption">Про</h3>
           <p class="price__price">10790 ₽</p>
-          <p class="price__sub">1 год</p>
+          <p class="price__sub">бессрочно</p>
           <ul class="price__list">
             <li class="price__point"> все опции доступные для версии Лайт</li>
             <li class="price__point">коробочная версия с интеграцией в 1С: Розница</li>
@@ -629,7 +647,7 @@
             <a class="price__link" href="#">Купить сейчас</a>
           </div>
         </div>
-        <div class="price__item">
+        <div class="price__item swiper-slide">
           <h3 class="price__caption">Проект</h3>
           <p class="price__price price__price--small">по запросу</p>
           <p class="price__sub">По согласованию</p>
@@ -646,6 +664,7 @@
             <a class="price__link" href="#">Купить сейчас</a>
           </div>
         </div>
+      </div>
       </div>
       <div class="price__get">
         <a class="price__all" href="#">Посмотреть все тарифы</a>
@@ -755,8 +774,9 @@
   <section class="key">
     <div class="container">
       <h2 class="key__title">Ключевые функции<br> <span class="key__light">«Метафора Касса»</span></h2>
-      <div class="key__block">
-        <div class="key__item">
+      <div class="swiper key__slider">
+        <div class="key__block swiper-wrapper">
+        <div class="key__item swiper-slide">
           <img class="key__icon" src="img/icons/key-1.svg" width="60" height="60" alt="Иконка">
           <h3 class="key__caption">Базовые</h3>
           <ul class="key__list">
@@ -769,7 +789,7 @@
             <li class="key__point">Демо-режим для обучения</li>
           </ul>
         </div>
-        <div class="key__item">
+        <div class="key__item swiper-slide">
           <img class="key__icon" src="img/icons/key-2.svg" width="60" height="60" alt="Иконка">
           <h3 class="key__caption">Продажа и возврат</h3>
           <ul class="key__list">
@@ -782,7 +802,7 @@
             <li class="key__point">Отправка электронного чека (ОФД)</li>
           </ul>
         </div>
-        <div class="key__item">
+        <div class="key__item swiper-slide">
           <img class="key__icon" src="img/icons/key-3.svg" width="60" height="60" alt="Иконка">
           <h3 class="key__caption">Оплата</h3>
           <ul class="key__list">
@@ -795,7 +815,7 @@
             <li class="key__point">BNPL</li>
           </ul>
         </div>
-        <div class="key__item">
+        <div class="key__item swiper-slide">
           <img class="key__icon" src="img/icons/key-4.svg" width="60" height="60" alt="Иконка">
           <h3 class="key__caption">Программа лояльности</h3>
           <ul class="key__list">
@@ -806,7 +826,7 @@
             <li class="key__point">Проверка текущего баланса и срока сертификата</li>
           </ul>
         </div>
-        <div class="key__item">
+        <div class="key__item swiper-slide">
           <img class="key__icon" src="img/icons/key-5.svg" width="60" height="60" alt="Иконка">
           <h3 class="key__caption">Интеграции</h3>
           <ul class="key__list">
@@ -816,7 +836,7 @@
             <li class="key__point">API для интеграции с любыми сторонними системами</li>
           </ul>
         </div>
-        <div class="key__item">
+        <div class="key__item swiper-slide">
           <img class="key__icon" src="img/icons/key-6.svg" width="60" height="60" alt="Иконка">
           <h3 class="key__caption">Оборудование</h3>
           <ul class="key__list">
@@ -829,6 +849,7 @@
             <li class="key__point">Второй монитор для покупателя</li>
           </ul>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -1068,8 +1089,9 @@
   <section class="poln">
     <div class="container">
       <h2 class="poln__title">Полное соответсвие законодательству РФ</h2>
-      <div class="poln__block">
-        <div class="poln__item">
+      <div class="poin__slider swiper">
+        <div class="poln__block swiper-wrapper">
+        <div class="poln__item swiper-slide">
           <div class="poln__top">
             <img class="poln__image" src="img/poln-1.svg" width="372" height="372" loading="lazy" alt="Картинка">
           </div>
@@ -1078,7 +1100,7 @@
             <p class="poln__text">Онлайн и офлайн проверка кодов маркировки для одежды и обуви, РР и&nbsp;ОИСМ</p>
           </div>
         </div>
-        <div class="poln__item">
+        <div class="poln__item swiper-slide">
           <div class="poln__top">
             <img class="poln__image" src="img/poln-2.svg" width="372" height="372" loading="lazy" alt="Картинка">
           </div>
@@ -1087,7 +1109,7 @@
             <p class="poln__text">Отправка информации о телефоне или электронной почте покупателя в ОФД</p>
           </div>
         </div>
-        <div class="poln__item">
+        <div class="poln__item swiper-slide">
           <div class="poln__top">
             <img class="poln__image" src="img/poln-3.svg" width="252" height="276" loading="lazy" alt="Картинка">
           </div>
@@ -1096,6 +1118,7 @@
             <p class="poln__text">Полностью соответствует требования закона, формат фискальных данных 1.2</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>
