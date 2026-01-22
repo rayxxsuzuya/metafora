@@ -96,6 +96,14 @@ window.addEventListener('scroll', () => {
   }
 });
 
+if (document.querySelector('.help__open')) {
+  document.querySelector('.help__open').addEventListener('click', function() {
+    document.querySelector('.help__search.mobile').style.display = 'block';
+  })
+}
+
+const isMobile = window.innerWidth <= 700;
+
 const pageSlider = new Swiper('.page-slider__slider', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -106,6 +114,7 @@ const pageSlider = new Swiper('.page-slider__slider', {
 
   pagination: {
     el: '.page-slider .swiper-pagination',
+    clickable: true,
   },
 
   navigation: {
@@ -113,6 +122,10 @@ const pageSlider = new Swiper('.page-slider__slider', {
     prevEl: '.page-slider__slider .swiper-button-prev',
   },
 
+  autoplay: isMobile ? {
+    delay: 2000,
+    disableOnInteraction: false,
+  } : false,
 });
 
 const blogSlider = new Swiper('.blog__slider', {
@@ -207,6 +220,11 @@ const keySlider = new Swiper('.key__slider', {
       slidesPerView: 'auto',
     },
   },
+
+  autoplay: isMobile ? {
+    delay: 2000,
+    disableOnInteraction: false,
+  } : false,
 });
 
 const compareSlider1 = new Swiper('.compare__slider.first', {

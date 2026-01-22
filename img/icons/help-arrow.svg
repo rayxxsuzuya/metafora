@@ -1,21 +1,7 @@
-<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g filter="url(#filter0_d_2036_12597)">
-    <path d="M20 35.5C11.4396 35.5 4.5 28.5604 4.5 20C4.5 11.4396 11.4396 4.5 20 4.5C28.5604 4.5 35.5 11.4396 35.5 20C35.5 28.5604 28.5604 35.5 20 35.5Z" stroke="#1F5FDB" shape-rendering="crispEdges" />
-  </g>
-  <mask id="path-2-inside-1_2036_12597" fill="white">
-    <path d="M10.4004 17.333L19.4514 8.28204L28.5023 17.333L19.4513 26.384L10.4004 17.333Z" />
-  </mask>
-  <path d="M19.4513 26.384L18.7442 27.0911L19.4513 27.7982L20.1584 27.0911L19.4513 26.384ZM28.5023 17.333L27.7952 16.6259L18.7442 25.6769L19.4513 26.384L20.1584 27.0911L29.2094 18.0401L28.5023 17.333ZM19.4513 26.384L20.1584 25.6769L11.1075 16.6259L10.4004 17.333L9.69328 18.0401L18.7442 27.0911L19.4513 26.384Z" fill="#1F5FDB" mask="url(#path-2-inside-1_2036_12597)" />
-  <defs>
-    <filter id="filter0_d_2036_12597" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-      <feOffset dx="1" dy="1" />
-      <feGaussianBlur stdDeviation="2.5" />
-      <feComposite in2="hardAlpha" operator="out" />
-      <feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.192157 0 0 0 0 0.239216 0 0 0 0.3 0" />
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2036_12597" />
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2036_12597" result="shape" />
-    </filter>
-  </defs>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 31.4004C7.49482 31.4004 0.599611 24.5052 0.599611 16C0.599612 7.49482 7.49482 0.599614 16 0.599615C24.5052 0.599615 31.4004 7.49482 31.4004 16C31.4004 24.5052 24.5052 31.4004 16 31.4004Z" stroke="#1F5FDB" stroke-width="1.2"/>
+<mask id="path-2-inside-1_2001_9422" fill="white">
+<path d="M6.40039 13.333L15.4514 4.28205L24.5023 13.333L15.4513 22.384L6.40039 13.333Z"/>
+</mask>
+<path d="M15.4513 22.384L14.6028 23.2325L15.4513 24.081L16.2999 23.2325L15.4513 22.384ZM24.5023 13.333L23.6538 12.4845L14.6028 21.5354L15.4513 22.384L16.2999 23.2325L25.3508 14.1815L24.5023 13.333ZM15.4513 22.384L16.2999 21.5354L7.24892 12.4845L6.40039 13.333L5.55186 14.1815L14.6028 23.2325L15.4513 22.384Z" fill="#1F5FDB" mask="url(#path-2-inside-1_2001_9422)"/>
 </svg>
