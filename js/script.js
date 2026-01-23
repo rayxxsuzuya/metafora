@@ -97,7 +97,7 @@ window.addEventListener('scroll', () => {
 });
 
 if (document.querySelector('.help__open')) {
-  document.querySelector('.help__open').addEventListener('click', function() {
+  document.querySelector('.help__open').addEventListener('click', function () {
     document.querySelector('.help__search.mobile').style.display = 'block';
   })
 }
@@ -111,6 +111,8 @@ const pageSlider = new Swiper('.page-slider__slider', {
   centeredSlidesBounds: true,
   loop: true,
   initialSlide: 1,
+  freeMode: false,
+  freeModeMomentum: false,
 
   pagination: {
     el: '.page-slider .swiper-pagination',
@@ -134,6 +136,8 @@ const blogSlider = new Swiper('.blog__slider', {
   centeredSlides: true,
   centeredSlidesBounds: true,
   loop: false,
+  freeMode: false,
+  freeModeMomentum: false,
   breakpoints: {
     700: {
       spaceBetween: 16,
@@ -145,6 +149,12 @@ const blogSlider = new Swiper('.blog__slider', {
       spaceBetween: 16,
       centeredSlides: false,
       centeredSlidesBounds: false,
+      freeMode: {
+        enabled: true,
+        sticky: false, // Слайдер останавливается там, где остановился
+        momentum: true, // Инерция при прокрутке
+      },
+      freeModeMomentum: true,
     }
   },
 });
@@ -153,6 +163,8 @@ const eventsSlider = new Swiper('.events__slider', {
   slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
+  freeMode: false,
+  freeModeMomentum: false,
   breakpoints: {
     1100: {
       slidesPerView: 4,
@@ -167,6 +179,12 @@ const eventsSlider = new Swiper('.events__slider', {
       slidesPerView: 'auto',
       spaceBetween: 16,
       loop: false,
+      freeMode: {
+        enabled: true,
+        sticky: false, // Слайдер останавливается там, где остановился
+        momentum: true, // Инерция при прокрутке
+      },
+      freeModeMomentum: true,
     }
   },
 });
@@ -175,6 +193,8 @@ const priceSlider = new Swiper('.price__slider', {
   slidesPerView: 4,
   spaceBetween: 24,
   loop: false,
+  freeMode: false,
+  freeModeMomentum: false,
   breakpoints: {
     1100: {
       slidesPerView: 4,
@@ -185,6 +205,12 @@ const priceSlider = new Swiper('.price__slider', {
     1: {
       slidesPerView: 'auto',
       spaceBetween: 16,
+      freeMode: {
+        enabled: true,
+        sticky: false, // Слайдер останавливается там, где остановился
+        momentum: true, // Инерция при прокрутке
+      },
+      freeModeMomentum: true,
     }
   },
 });
@@ -196,13 +222,22 @@ const poinSlider = new Swiper('.poin__slider', {
   breakpoints: {
     1000: {
       slidesPerView: 3,
+      freeMode: false,
+  freeModeMomentum: false,
     },
     600: {
       slidesPerView: 2,
+      freeMode: false,
     },
     1: {
       slidesPerView: 'auto',
       spaceBetween: 16,
+      freeMode: {
+        enabled: true,
+        sticky: false, // Слайдер останавливается там, где остановился
+        momentum: true, // Инерция при прокрутке
+      },
+      freeModeMomentum: true,
     }
   },
 
@@ -215,14 +250,23 @@ const poinSlider = new Swiper('.poin__slider', {
 const keySlider = new Swiper('.key__slider', {
   slidesPerView: 3,
   spaceBetween: 0,
-  loop: true, // включаем зацикливание
+  loop: true,
+  
   breakpoints: {
     900: {
       spaceBetween: 0,
+      freeMode: false,
+  freeModeMomentum: false,
     },
     1: {
       spaceBetween: 16,
       slidesPerView: 'auto',
+      freeMode: {
+        enabled: true,
+        sticky: false, // Слайдер останавливается там, где остановился
+        momentum: true, // Инерция при прокрутке
+      },
+      freeModeMomentum: true,
     },
   },
 
@@ -236,9 +280,12 @@ const compareSlider1 = new Swiper('.compare__slider.first', {
   slidesPerView: 4,
   spaceBetween: 8,
   loop: false,
+  
   breakpoints: {
     1100: {
       slidesPerView: 4,
+      freeMode: false,
+      freeModeMomentum: false,
     },
     900: {
       slidesPerView: 3,
@@ -249,9 +296,16 @@ const compareSlider1 = new Swiper('.compare__slider.first', {
     1: {
       slidesPerView: 'auto',
       spaceBetween: 8,
+      freeMode: {
+        enabled: true,
+        sticky: false, // Слайдер останавливается там, где остановился
+        momentum: true, // Инерция при прокрутке
+      },
+      freeModeMomentum: true
+    },
     }
   },
-});
+);
 
 const compareSlider2 = new Swiper('.compare__slider.second', {
   slidesPerView: 4,
@@ -260,6 +314,8 @@ const compareSlider2 = new Swiper('.compare__slider.second', {
   breakpoints: {
     1100: {
       slidesPerView: 4,
+       freeMode: false,
+      freeModeMomentum: false,
     },
     900: {
       slidesPerView: 3,
@@ -270,6 +326,12 @@ const compareSlider2 = new Swiper('.compare__slider.second', {
     1: {
       slidesPerView: 'auto',
       spaceBetween: 8,
+      freeMode: {
+        enabled: true,
+        sticky: false, // Слайдер останавливается там, где остановился
+        momentum: true, // Инерция при прокрутке
+      },
+      freeModeMomentum: true
     }
   },
 });
@@ -356,16 +418,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 if (document.querySelector('.help__int')) {
- document.addEventListener('DOMContentLoaded', function() {
-  const helpInt = document.querySelector('.help__int');
-  const helpLeft = document.querySelector('.help__left');
-  if (helpInt && helpLeft) {
-    helpInt.addEventListener('click', function() {
-      this.style.display = 'none';
-      helpLeft.style.display = 'block';
-    });
-  }
-});
+  document.addEventListener('DOMContentLoaded', function () {
+    const helpInt = document.querySelector('.help__int');
+    const helpLeft = document.querySelector('.help__left');
+    if (helpInt && helpLeft) {
+      helpInt.addEventListener('click', function () {
+        this.style.display = 'none';
+        helpLeft.style.display = 'block';
+      });
+    }
+  });
 }
 
 if (document.querySelector('.phone')) {
