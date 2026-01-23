@@ -109,7 +109,7 @@ const pageSlider = new Swiper('.page-slider__slider', {
   spaceBetween: 30,
   centeredSlides: true,
   centeredSlidesBounds: true,
-  loop: false,
+  loop: true,
   initialSlide: 1,
 
   pagination: {
@@ -192,7 +192,7 @@ const priceSlider = new Swiper('.price__slider', {
 const poinSlider = new Swiper('.poin__slider', {
   slidesPerView: 3,
   spaceBetween: 24,
-  loop: false,
+  loop: true,
   breakpoints: {
     1000: {
       slidesPerView: 3,
@@ -205,15 +205,20 @@ const poinSlider = new Swiper('.poin__slider', {
       spaceBetween: 16,
     }
   },
+
+  autoplay: isMobile ? {
+    delay: 2000,
+    disableOnInteraction: false,
+  } : false,
 });
 
 const keySlider = new Swiper('.key__slider', {
   slidesPerView: 3,
   spaceBetween: 0,
-  loop: false,
+  loop: true, // включаем зацикливание
   breakpoints: {
     900: {
-      spaceBetween: 0
+      spaceBetween: 0,
     },
     1: {
       spaceBetween: 16,

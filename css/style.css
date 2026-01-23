@@ -267,7 +267,7 @@ html {
 }
 
 
- .hero__subcaption {
+.hero__subcaption {
   display: block;
   font-weight: 400;
   font-size: 17px;
@@ -515,7 +515,7 @@ html {
 
 .price__more:hover {
   /* color: #fff; */
-  background-color: #f5f5f5;
+  background-color: #E2E2E2;
 }
 
 .learn {
@@ -1652,6 +1652,10 @@ html {
   margin-bottom: 0;
 }
 
+.retail__position {
+  position: relative;
+}
+
 .retail__light {
   color: #000;
 }
@@ -1662,15 +1666,17 @@ html {
 
 .retail__bottom {
   position: absolute;
-  bottom: 30px;
-  right: 168px;
-  padding: 66px 84px;
-  backdrop-filter: blur(24px);
-  background: rgba(31, 95, 219, 0.32);
+  bottom: 24px;
+  right: 24px;
+  left: 24px;
+  padding: 47px 25px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 48px;
-  border-radius: 32px;
+  gap: 34px;
+  border-radius: 23px;
+  backdrop-filter: blur(17.179887771606445px);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .steps {
@@ -1930,13 +1936,13 @@ html {
 
 @media (min-width: 600px) {
   .events__slide {
-  transition: 0.3s;
-}
+    transition: 0.3s;
+  }
 
-.events__slide:hover {
-  transform: translateY(-15px);
-  box-shadow: -15px 15px 20px 0 rgba(0, 0, 0, 0.1);
-}
+  .events__slide:hover {
+    transform: translateY(-15px);
+    box-shadow: -15px 15px 20px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .events__slide:hover {
@@ -2283,6 +2289,14 @@ html {
   transition: 0.3s;
 }
 
+.button-up circle {
+  transition: 0.3s;
+}
+
+.button-up:hover circle {
+  fill: #1B51BB;
+}
+
 .button-up.active {
   opacity: 1;
   z-index: 50;
@@ -2469,10 +2483,15 @@ html {
   color: #1f5fdb;
 }
 
+.videos__number:hover {
+  text-decoration: underline;
+}
+
 .evo {
   overflow: hidden;
   padding: 120px 0 152px;
   position: relative;
+  background-color: #f5f5f5;
 }
 
 .evo:before {
@@ -2963,7 +2982,7 @@ html {
   content: '';
   background: url(../img/icons/help-arrow.svg) no-repeat center / cover;
   width: 32px;
- min-width: 32px;
+  min-width: 32px;
   height: 32px;
   transition: 0.3s;
 }
@@ -3019,6 +3038,10 @@ html {
   font-size: 17px;
   line-height: 120%;
   color: #2b313d;
+}
+
+.help__link:hover {
+  text-decoration: underline;
 }
 
 .help__tech {
@@ -3258,6 +3281,10 @@ html {
   color: #fff;
 }
 
+.form-block__input:focus {
+  outline: none;
+}
+
 .form-block__wrapper {
   max-width: 640px;
   width: 100%;
@@ -3285,6 +3312,10 @@ html {
   color: #fff;
 }
 
+.form-block__select:focus {
+  outline: none;
+}
+
 .form-block__textarea {
   display: block;
   width: 100%;
@@ -3303,6 +3334,10 @@ html {
 
 .form-block__textarea::placeholder {
   color: #fff;
+}
+
+.form-block__textarea:focus {
+  outline: none;
 }
 
 .form-block__rapo {
@@ -3360,8 +3395,7 @@ html {
 }
 
 .form-block__submit:hover {
-  background: #1f5fdb;
-  color: #fff;
+  background: #E2E2E2;
 }
 
 .fora {
@@ -5843,16 +5877,29 @@ html {
   }
 
   .retail__bottom {
-    bottom: 1.5625vw;
+    bottom: 1.25vw;
     /* 30px */
-    right: 8.75vw;
+    right: 1.25vw;
+    left: 1.25vw;
     /* 168px */
-    padding: 3.4375vw 4.375vw;
+    padding: 2.45vw 1.30vw;
     /* 66px 84px */
-    gap: 2.5vw;
+    gap: 1.77vw;
     /* 48px */
-    border-radius: 1.666667vw;
+    border-radius: 1.20vw;
     /* 32px */
+  }
+
+  .retail__logo:nth-child(1) {
+    width: 8.44vw;
+  }
+
+  .retail__logo:nth-child(2) {
+    width: 1.20vw;
+  }
+
+  .retail__logo:nth-child(3) {
+    width: 13.23vw;
   }
 
   .steps {
@@ -7963,11 +8010,6 @@ html {
 
   .retail__bottom {
     display: flex;
-    bottom: 304px;
-    right: 30px;
-    left: 30px;
-    padding: 50px 20px;
-    justify-content: center;
   }
 
   .retail__logo {
@@ -8017,9 +8059,9 @@ html {
     padding: 0;
   }
 
-    .help__int {
-      display: flex;
-    }
+  .help__int {
+    display: flex;
+  }
 
   .help__left {
     display: none;
@@ -8232,9 +8274,9 @@ html {
     background: rgba(0, 0, 0, 0.2);
     padding: 6.13vw 4vw;
     border-radius: 3.20vw;
-    right: 3.47vw;
-    left: 3.47vw;
-    bottom: 81vw;
+    right: 3.73vw;
+    left: 3.73vw;
+    bottom: 3.73vw;
     gap: 4.27vw;
   }
 
@@ -8271,6 +8313,11 @@ html {
 
   .price {
     overflow: hidden;
+  }
+
+  .blog__title {
+    font-size: 20px;
+    margin-bottom: 24px;
   }
 
   .hero__title {
