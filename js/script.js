@@ -111,8 +111,7 @@ const pageSlider = new Swiper('.page-slider__slider', {
   centeredSlidesBounds: true,
   loop: true,
   initialSlide: 1,
-  freeMode: false,
-  freeModeMomentum: false,
+ 
 
   pagination: {
     el: '.page-slider .swiper-pagination',
@@ -136,8 +135,6 @@ const blogSlider = new Swiper('.blog__slider', {
   centeredSlides: true,
   centeredSlidesBounds: true,
   loop: false,
-  freeMode: false,
-  freeModeMomentum: false,
   breakpoints: {
     700: {
       spaceBetween: 16,
@@ -149,12 +146,6 @@ const blogSlider = new Swiper('.blog__slider', {
       spaceBetween: 16,
       centeredSlides: false,
       centeredSlidesBounds: false,
-      freeMode: {
-        enabled: true,
-        sticky: false, // Слайдер останавливается там, где остановился
-        momentum: true, // Инерция при прокрутке
-      },
-      freeModeMomentum: true,
     }
   },
 });
@@ -163,8 +154,6 @@ const eventsSlider = new Swiper('.events__slider', {
   slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
-  freeMode: false,
-  freeModeMomentum: false,
   breakpoints: {
     1100: {
       slidesPerView: 4,
@@ -179,12 +168,6 @@ const eventsSlider = new Swiper('.events__slider', {
       slidesPerView: 'auto',
       spaceBetween: 16,
       loop: false,
-      freeMode: {
-        enabled: true,
-        sticky: false, // Слайдер останавливается там, где остановился
-        momentum: true, // Инерция при прокрутке
-      },
-      freeModeMomentum: true,
     }
   },
 });
@@ -193,8 +176,6 @@ const priceSlider = new Swiper('.price__slider', {
   slidesPerView: 4,
   spaceBetween: 24,
   loop: false,
-  freeMode: false,
-  freeModeMomentum: false,
   breakpoints: {
     1100: {
       slidesPerView: 4,
@@ -205,12 +186,6 @@ const priceSlider = new Swiper('.price__slider', {
     1: {
       slidesPerView: 'auto',
       spaceBetween: 16,
-      freeMode: {
-        enabled: true,
-        sticky: false, // Слайдер останавливается там, где остановился
-        momentum: true, // Инерция при прокрутке
-      },
-      freeModeMomentum: true,
     }
   },
 });
@@ -222,22 +197,13 @@ const poinSlider = new Swiper('.poin__slider', {
   breakpoints: {
     1000: {
       slidesPerView: 3,
-      freeMode: false,
-  freeModeMomentum: false,
     },
     600: {
       slidesPerView: 2,
-      freeMode: false,
     },
     1: {
       slidesPerView: 'auto',
       spaceBetween: 16,
-      freeMode: {
-        enabled: true,
-        sticky: false, // Слайдер останавливается там, где остановился
-        momentum: true, // Инерция при прокрутке
-      },
-      freeModeMomentum: true,
     }
   },
 
@@ -255,18 +221,10 @@ const keySlider = new Swiper('.key__slider', {
   breakpoints: {
     900: {
       spaceBetween: 0,
-      freeMode: false,
-  freeModeMomentum: false,
     },
     1: {
       spaceBetween: 16,
       slidesPerView: 'auto',
-      freeMode: {
-        enabled: true,
-        sticky: false, // Слайдер останавливается там, где остановился
-        momentum: true, // Инерция при прокрутке
-      },
-      freeModeMomentum: true,
     },
   },
 
@@ -284,8 +242,6 @@ const compareSlider1 = new Swiper('.compare__slider.first', {
   breakpoints: {
     1100: {
       slidesPerView: 4,
-      freeMode: false,
-      freeModeMomentum: false,
     },
     900: {
       slidesPerView: 3,
@@ -296,12 +252,6 @@ const compareSlider1 = new Swiper('.compare__slider.first', {
     1: {
       slidesPerView: 'auto',
       spaceBetween: 8,
-      freeMode: {
-        enabled: true,
-        sticky: false, // Слайдер останавливается там, где остановился
-        momentum: true, // Инерция при прокрутке
-      },
-      freeModeMomentum: true
     },
     }
   },
@@ -314,8 +264,6 @@ const compareSlider2 = new Swiper('.compare__slider.second', {
   breakpoints: {
     1100: {
       slidesPerView: 4,
-       freeMode: false,
-      freeModeMomentum: false,
     },
     900: {
       slidesPerView: 3,
@@ -326,12 +274,6 @@ const compareSlider2 = new Swiper('.compare__slider.second', {
     1: {
       slidesPerView: 'auto',
       spaceBetween: 8,
-      freeMode: {
-        enabled: true,
-        sticky: false, // Слайдер останавливается там, где остановился
-        momentum: true, // Инерция при прокрутке
-      },
-      freeModeMomentum: true
     }
   },
 });
@@ -470,3 +412,131 @@ if (document.querySelector('.phone')) {
     });
   });
 }
+
+document.querySelectorAll('.videos__right').forEach(container => {
+  const calendarBtn = container.querySelector('.videos__calendar');
+  const calendarWrapper = container.querySelector('.calendarWrapper');
+  const monthYear = container.querySelector('.monthYear');
+  const prevBtn = container.querySelector('.prevMonth');
+  const nextBtn = container.querySelector('.nextMonth');
+  const daysContainer = container.querySelector('.days');
+
+  // Проверка наличия элементов
+  if (!calendarBtn || !calendarWrapper || !monthYear || !prevBtn || !nextBtn || !daysContainer) {
+    console.warn('Некоторые элементы не найдены внутри контейнера', container);
+    return;
+  }
+
+  // Инициализация текущей даты
+  const today = new Date();
+  let displayedMonth = today.getMonth();
+  let displayedYear = today.getFullYear();
+  let selectedDate = new Date(today); // создаем копию даты
+
+  // Функция обновления текста кнопки
+  function updateButtonText() {
+    const d = selectedDate.getDate().toString().padStart(2, '0');
+    const m = (selectedDate.getMonth() + 1).toString().padStart(2, '0');
+    const y = selectedDate.getFullYear();
+    calendarBtn.textContent = `${d}.${m}.${y}`;
+  }
+
+  // Обновляем кнопку с текущей датой
+  updateButtonText();
+
+  // Отрисовка календаря с текущими значениями
+  renderCalendar(displayedMonth, displayedYear);
+
+  // Обработчик открытия/скрытия календаря
+  calendarBtn.addEventListener('click', () => {
+    if (calendarWrapper.style.display === 'none' || calendarWrapper.style.display === '') {
+      calendarWrapper.style.display = 'block';
+      if (selectedDate) {
+        displayedMonth = selectedDate.getMonth();
+        displayedYear = selectedDate.getFullYear();
+      }
+      renderCalendar(displayedMonth, displayedYear);
+    } else {
+      calendarWrapper.style.display = 'none';
+    }
+  });
+
+  // Обработчики переключения месяцев
+  prevBtn.addEventListener('click', () => {
+    if (displayedMonth === 0) {
+      displayedMonth = 11;
+      displayedYear--;
+    } else {
+      displayedMonth--;
+    }
+    renderCalendar(displayedMonth, displayedYear);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (displayedMonth === 11) {
+      displayedMonth = 0;
+      displayedYear++;
+    } else {
+      displayedMonth++;
+    }
+    renderCalendar(displayedMonth, displayedYear);
+  });
+
+  // Функция для удаления активных дней
+  function clearActiveDays() {
+    container.querySelectorAll('.day').forEach(d => d.classList.remove('active'));
+  }
+
+  // Основная функция рендера календаря
+  function renderCalendar(month, year) {
+    daysContainer.innerHTML = '';
+
+    const monthNames = [
+      'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+      'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+    ];
+
+    monthYear.textContent = `${monthNames[month]} ${year}`;
+
+    const firstDay = new Date(year, month, 1);
+    const startDay = (firstDay.getDay() + 6) % 7;
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    const totalCells = startDay + daysInMonth;
+    const totalRows = Math.ceil(totalCells / 7);
+    const totalCellsNeeded = totalRows * 7;
+
+    let date = 1;
+
+    for (let i = 0; i < totalCellsNeeded; i++) {
+      const cell = document.createElement('div');
+      cell.className = 'day';
+
+      if (i < startDay || date > daysInMonth) {
+        cell.innerHTML = '';
+      } else {
+        const currentDate = date; // сохраняем текущее значение для замыкания
+        cell.innerHTML = currentDate;
+
+        if (
+          selectedDate &&
+          selectedDate.getFullYear() === year &&
+          selectedDate.getMonth() === month &&
+          selectedDate.getDate() === currentDate
+        ) {
+          cell.classList.add('active');
+        }
+
+        cell.addEventListener('click', () => {
+          clearActiveDays();
+          cell.classList.add('active');
+          selectedDate = new Date(year, month, currentDate);
+          updateButtonText();
+        });
+
+        date++;
+      }
+      daysContainer.appendChild(cell);
+    }
+  }
+});
